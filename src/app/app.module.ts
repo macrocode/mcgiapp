@@ -9,7 +9,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { IonicStorageModule } from '@ionic/storage';
 
-import { ConferenceApp } from './app.component';
+import { MCGIApp } from './app.component';
 
 import { AboutPage } from '../pages/about/about';
 
@@ -44,7 +44,7 @@ import { Network } from '@ionic-native/network';
 
 @NgModule({
   declarations: [
-    ConferenceApp,
+    MCGIApp,
     AboutPage,
     AccountPage,
     LoginPage,
@@ -75,7 +75,7 @@ import { Network } from '@ionic-native/network';
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(ConferenceApp, {}, {
+    IonicModule.forRoot(MCGIApp, {}, {
       links: [
         { component: TabsPage, name: 'TabsPage', segment: 'tabs' },
         { component: GatheringtabsPage, name: 'GatheringtabsPage', segment: 'Gatheringtabs' },
@@ -100,7 +100,7 @@ import { Network } from '@ionic-native/network';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    ConferenceApp,
+    MCGIApp,
     AboutPage,
     AccountPage,
     LoginPage,
