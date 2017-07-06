@@ -18,6 +18,7 @@ import { SupportPage } from '../pages/support/support';
 import { GatheringPage } from '../pages/gathering/gathering';
 import { BePage } from '../pages/be/be';
 import { NewsPage } from '../pages/news/news';
+import { PmPage } from '../pages/pm/pm';
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
@@ -47,7 +48,7 @@ export class ConferenceApp {
   
   
   servicePages: PageInterface[] = [
-    { title: '24/7 Community Prayer', name: 'AccountPage', component: AccountPage, icon: 'cloud' },
+    { title: '24/7 Community Prayer', name: 'PmPage', component: PmPage, icon: 'cloud' },
     { title: 'News', name: 'NewsPage', component: NewsPage, icon: 'book' },
     { title: 'Upcoming Events', name: 'TabsPage', component: TabsPage, icon: 'timer' }
   ];

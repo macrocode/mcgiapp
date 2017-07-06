@@ -37,7 +37,7 @@ import { TutorialPage } from '../pages/tutorial/tutorial';
 import { SupportPage } from '../pages/support/support';
 import { GatheringPage } from '../pages/gathering/gathering';
 import { NewsPage } from '../pages/news/news';
-
+import { PmPage} from '../pages/pm/pm';
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
 import { Network } from '@ionic-native/network'; 
@@ -68,7 +68,8 @@ import { Network } from '@ionic-native/network';
     BePage,
     MmePage,
     OePage,
-    NewsPage
+    NewsPage,
+    PmPage
    
   ],
   imports: [
@@ -92,6 +93,7 @@ import { Network } from '@ionic-native/network';
         { component: AccountPage, name: 'AccountPage', segment: 'account' },
         { component: SignupPage, name: 'SignupPage', segment: 'signup' },
         { component: NewsPage, name: 'NewsPage', segment: 'news' },
+        { component: PmPage, name: 'PmPage', segment: 'pmpage' },
       ]
     }),
     IonicStorageModule.forRoot()
@@ -122,7 +124,8 @@ import { Network } from '@ionic-native/network';
     BePage,
     MmePage,
     OePage,
-    NewsPage
+    NewsPage,
+    PmPage
   ],
   providers: [
     { provide: ErrorHandler, useClass: IonicErrorHandler },
