@@ -5,7 +5,9 @@
 
     <ion-header>
       <ion-toolbar>
-        <ion-title>Menu</ion-title>
+         <ion-title>
+        <img alt="logo" height="44" src="assets/img/logodemo.png" > 
+    </ion-title>
       </ion-toolbar>
     </ion-header>
 
@@ -13,9 +15,18 @@
 
       <ion-list>
         <ion-list-header>
-          Navigate
+          About
         </ion-list-header>
         <button ion-item menuClose *ngFor="let p of appPages" (click)="openPage(p)">
+          <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+          {{p.title}}
+        </button>
+      </ion-list>
+      <ion-list>
+        <ion-list-header>
+          Services
+        </ion-list-header>
+        <button ion-item menuClose *ngFor="let p of servicePages" (click)="openPage(p)">
           <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
           {{p.title}}
         </button>
@@ -57,9 +68,19 @@
 
       <ion-list>
         <ion-list-header>
-          Navigate
+          About
         </ion-list-header>
         <button ion-item menuClose *ngFor="let p of appPages" (click)="openPage(p)">
+          <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
+          {{p.title}}
+        </button>
+      </ion-list>
+
+        <ion-list>
+        <ion-list-header>
+          Services
+        </ion-list-header>
+        <button ion-item menuClose *ngFor="let p of servicePages" (click)="openPage(p)">
           <ion-icon item-start [name]="p.icon" [color]="isActive(p)"></ion-icon>
           {{p.title}}
         </button>

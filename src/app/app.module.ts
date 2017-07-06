@@ -12,7 +12,11 @@ import { IonicStorageModule } from '@ionic/storage';
 import { ConferenceApp } from './app.component';
 
 import { AboutPage } from '../pages/about/about';
+
+// Pop over Pages
 import { PopoverPage } from '../pages/about-popover/about-popover';
+import { GatheringPopoverPage } from '../pages/gathering-popover/gathering-popover';
+import { EventsPopoverPage } from '../pages/events-popover/events-popover';
 import { AccountPage } from '../pages/account/account';
 import { LoginPage } from '../pages/login/login';
 import { MapPage } from '../pages/map/map';
@@ -23,12 +27,20 @@ import { SignupPage } from '../pages/signup/signup';
 import { SpeakerDetailPage } from '../pages/speaker-detail/speaker-detail';
 import { SpeakerListPage } from '../pages/speaker-list/speaker-list';
 import { TabsPage } from '../pages/tabs/tabs';
+import { GatheringtabsPage } from '../pages/gatheringtabs/gatheringtabs';
+import { WspmPage } from '../pages/wspm/wspm';
+import { TgPage } from '../pages/tg/tg';
+import { BePage } from '../pages/be/be';
+import { MmePage } from '../pages/mme/mme';
+import { OePage } from '../pages/oe/oe';
 import { TutorialPage } from '../pages/tutorial/tutorial';
 import { SupportPage } from '../pages/support/support';
+import { GatheringPage } from '../pages/gathering/gathering';
+import { NewsPage } from '../pages/news/news';
 
 import { ConferenceData } from '../providers/conference-data';
 import { UserData } from '../providers/user-data';
-
+import { Network } from '@ionic-native/network'; 
 
 @NgModule({
   declarations: [
@@ -38,6 +50,8 @@ import { UserData } from '../providers/user-data';
     LoginPage,
     MapPage,
     PopoverPage,
+    EventsPopoverPage,
+    GatheringPopoverPage,
     SchedulePage,
     ScheduleFilterPage,
     SessionDetailPage,
@@ -45,8 +59,17 @@ import { UserData } from '../providers/user-data';
     SpeakerDetailPage,
     SpeakerListPage,
     TabsPage,
+    GatheringtabsPage,
     TutorialPage,
-    SupportPage
+    SupportPage,
+    GatheringPage,
+    WspmPage,
+    TgPage,
+    BePage,
+    MmePage,
+    OePage,
+    NewsPage
+   
   ],
   imports: [
     BrowserModule,
@@ -54,7 +77,9 @@ import { UserData } from '../providers/user-data';
     IonicModule.forRoot(ConferenceApp, {}, {
       links: [
         { component: TabsPage, name: 'TabsPage', segment: 'tabs' },
+        { component: GatheringtabsPage, name: 'GatheringtabsPage', segment: 'Gatheringtabs' },
         { component: SchedulePage, name: 'Schedule', segment: 'schedule' },
+        { component: GatheringPage, name: 'Gathering', segment: 'gathering' },
         { component: SessionDetailPage, name: 'SessionDetail', segment: 'sessionDetail/:name' },
         { component: ScheduleFilterPage, name: 'ScheduleFilter', segment: 'scheduleFilter' },
         { component: SpeakerListPage, name: 'SpeakerList', segment: 'speakerList' },
@@ -65,7 +90,8 @@ import { UserData } from '../providers/user-data';
         { component: SupportPage, name: 'SupportPage', segment: 'support' },
         { component: LoginPage, name: 'LoginPage', segment: 'login' },
         { component: AccountPage, name: 'AccountPage', segment: 'account' },
-        { component: SignupPage, name: 'SignupPage', segment: 'signup' }
+        { component: SignupPage, name: 'SignupPage', segment: 'signup' },
+        { component: NewsPage, name: 'NewsPage', segment: 'news' },
       ]
     }),
     IonicStorageModule.forRoot()
@@ -78,6 +104,8 @@ import { UserData } from '../providers/user-data';
     LoginPage,
     MapPage,
     PopoverPage,
+    EventsPopoverPage,
+    GatheringPopoverPage,
     SchedulePage,
     ScheduleFilterPage,
     SessionDetailPage,
@@ -85,15 +113,24 @@ import { UserData } from '../providers/user-data';
     SpeakerDetailPage,
     SpeakerListPage,
     TabsPage,
+    GatheringtabsPage,
     TutorialPage,
-    SupportPage
+    SupportPage,
+    GatheringPage,
+    WspmPage,
+    TgPage,
+    BePage,
+    MmePage,
+    OePage,
+    NewsPage
   ],
   providers: [
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     ConferenceData,
     UserData,
     InAppBrowser,
-    SplashScreen
+    SplashScreen,
+    Network
   ]
 })
 export class AppModule { }
