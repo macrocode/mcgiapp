@@ -1,1 +1,1 @@
-"# mcgiapp prototype" 
+"# MCGI Beta" 
